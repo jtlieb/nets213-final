@@ -1,0 +1,26 @@
+Sample input/output from QC module
+
+Turkers will be shown the summarized story so far as well as as the six options that 
+three other workers submitted. In addition to these six options there will be two options that
+are NOT to be selected. We will not use the submissions of any workers who vote for either of these two. 
+The Turker's task will be to read the summarized version of the story so far and select the two options
+that make the most logical sense as possible next actions for the player. 
+
+An example:
+
+Please read the story so far and select the two options that make the most sense given the context of the passage. 
+
+Story so far:
+
+You are a blacksmith working for the royal forge. The commoners aren't happy with the monarchy and you've
+secretly been making weapons for a potential uprising. You decided to distribute the first batch you made,
+however as you're doing so a messenger approaches you and tells you the king requests your presence. What do you do?
+
+1) You ignore him and keep walking
+2) You tell them they have the wrong person
+3) You keep walking your dog
+4) You drop your weapons and follow them instantly
+5) You feed your bird and ignore them
+6) You stab them
+7) You run away
+8) You follow them and plan on making an exit on the journey
