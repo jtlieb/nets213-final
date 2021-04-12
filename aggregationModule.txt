@@ -1,9 +1,35 @@
 Sample input/output from the Aggregation Module
 
+
+FINDING THE POSSIBLE OPTIONS:
+
+Turkers will be asked to come up with two decisions that are opposite, or near opposite to each other.
+
+Example:
+
+Please enter two decisions that are opposite, or close to opposite from each other. These can be just about anything!
+
+For example something like this is what we're looking for:
+
+	1) Chase after him		2) Run away
+	
+				or
+
+	1) Deliver the message		2) Open it and read it yourself
+
+
+
+Decision 1: ________________________	Decision 2: __________________________
+
+
+
+
+MAKING THE STORY:
+
 Turkers will be shown the summarized story so far as well as options that they need to get the story to. They will then add to
 the story until it is at a place where the player can be asked about which of the options they want to follow.
 
-An example:
+Example:
 
 Please read the story so far and add to it to bring it to a point where there is a crossroads between the two options
 
