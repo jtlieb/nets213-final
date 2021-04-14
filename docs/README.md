@@ -1,4 +1,5 @@
-# Crowdsourced Text Adventure Game
+# Once Upon a Time{d HIT}:
+## A Crowdsourced Text Adventure Game
 The main components of our game include:
 1. Coming up with a general storyline 
 2. Crowdsourcing locations as well as situations that could occur in those locations
