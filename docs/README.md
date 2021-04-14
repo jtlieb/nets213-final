@@ -1,4 +1,4 @@
-# Once Upon a Time{d HIT}:
+# Once Upon a Time<sub>d HIT</sub>:
 ## A Crowdsourced Text Adventure Game
 The main components of our game include:
 1. Coming up with a general storyline 
