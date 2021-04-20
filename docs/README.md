@@ -2,9 +2,8 @@
 ## A Crowdsourced Text Adventure Game
 The main components of our game include:
 1. Coming up with a general storyline 
-2. Crowdsourcing locations as well as situations that could occur in those locations
-3. Crowdsourcing the different paths the story could take
-4. Compiling all the paths together and implementing the game
+2. Crowdsourcing the different paths the story could take
+3. Compiling all the paths together and implementing the game
 
 ## Coming up with a general storyline - 1 pt
 This should be pretty straightforward. We want to make the story
@@ -21,18 +20,15 @@ adding 5 levels to the game tree, which means there would be 5 decisions
 to be made before the game ends. 
 
 The first level will consist of 2 HITs where the Turkers are given an initial
-storyline and a particular location and situation that will be randomly selected
-from the results of the previous part. Their job is to first come up with a pair of
-two contrasting actions the player/character can take in the given location and situation,
-and then write a story block the story so far to those actions. After that,
+storyline. Their job is to first come up with a pair of
+two contrasting actions the player/character can take,
+and then write a story block connecting the story so far to those actions. After that,
 we will publish a batch of some low and odd number of HITs to vote on which story
 continuation submission is better, and branch off the story into two separate paths 
 based on the pair of actions that were selected. 
 
 Each level will therefore be exponentially larger than the last, and this above process will 
-continue for each individual storyline node. Hence, each node will receive a new, unique location
-and situation to connect the ongoing storyline to, and this process will continue until
-each path has hit 5 nodes. 
+continue for each individual storyline node.
 
 Milestones:
 - Create HTML for storyline continuation HITs
