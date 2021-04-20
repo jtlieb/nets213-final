@@ -66,7 +66,7 @@ def main():
 
     # Call functions and output required CSV files
 
-    with open('output1.csv', mode='w') as csv_file:
+    with open('data/input/QC_HIT_INPUT.csv', mode='w') as csv_file:
         fieldnames = [
             'Referring_Story_id', 
             'Referring_Decision_Id', 
