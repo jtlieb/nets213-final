@@ -14,23 +14,10 @@ to expand on it in different directions.
 Milestones:
 - Come up with interesting, general storyline as a baseline for the game
 
-## Crowdsourcing locations as well as situations that could occur in those locations - 2 pts
-We intend on creating 100 initial HITs to generate locations and 
-interesting situations that could occur in those locations,
-given a general storyline of our creation. After these HITs
-are completed, we will institute another round of HITs 
-to verify the quality of the submitted inputs.
-
-Milestones: 
-- Create HTML for the 100 initial HITs
-- Publish 100 HITs
-- Create HTML for the quality control HITs
-- Publish quality control HITs
-
-## Crowdsourcing the different paths the story could take - 10 pts (1 pt per level in the game tree)
+## Crowdsourcing the different paths the story could take - 10 pts (2 pt per level in the game tree)
 This component of the project will be executed in a level-by-level fashion, 
 in terms of how far along the game tree we have gotten. We intend on 
-adding 10 levels to the game tree, which means there would be 10 decisions 
+adding 5 levels to the game tree, which means there would be 5 decisions 
 to be made before the game ends. 
 
 The first level will consist of 2 HITs where the Turkers are given an initial
@@ -45,7 +32,7 @@ based on the pair of actions that were selected.
 Each level will therefore be exponentially larger than the last, and this above process will 
 continue for each individual storyline node. Hence, each node will receive a new, unique location
 and situation to connect the ongoing storyline to, and this process will continue until
-each path has hit 10 nodes. 
+each path has hit 5 nodes. 
 
 Milestones:
 - Create HTML for storyline continuation HITs
