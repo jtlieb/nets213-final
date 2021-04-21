@@ -1,0 +1,14 @@
+HITId,HITTypeId,Title,Description,Keywords,Reward,CreationTime,MaxAssignments,RequesterAnnotation,AssignmentDurationInSeconds,AutoApprovalDelayInSeconds,Expiration,NumberOfSimilarHITs,LifetimeInSeconds,AssignmentId,WorkerId,AssignmentStatus,AcceptTime,SubmitTime,AutoApprovalTime,ApprovalTime,RejectionTime,RequesterFeedback,WorkTimeInSeconds,LifetimeApprovalRate,Last30DaysApprovalRate,Last7DaysApprovalRate,Input.textbox1,Input.textbox2,Input.textbox3,Input.textbox4,Input.neg_qual_con1,Input.neg_qual_con2,Answer.textbox1,Answer.textbox2,Answer.textbox3,Answer.textbox4,Answer.neg_qual_con1,Answer.neg_qual_con2,Approve,Reject
+3KTZHH2ONIFRWP0G2MA8N816YPU8M2,3JHTEM36TI675XMN58RPGIR0IYNW9D,Are these continuations of a story good?,"You will be given a story and 6 possible continuations of the story. For each continuation, please select ""Yes"" if they are a good continuation of the story, otherwise ""No"".","story, writing",$0.01,Fri Feb 26 22:12:33 PST 2021,3,BatchId:4348237;OriginalHitTemplateId:928390873;,3600,259200,Fri Mar 05 22:12:33 PST 2021,,,33M4IA01QG1BVQCA64NIEQ8WYQEXRS,A1O4AAQX2KCD3N,Approved,Fri Feb 26 22:12:55 PST 2021,Fri Feb 26 22:14:39 PST 2021,Mon Mar 01 22:14:39 PST 2021,Mon Mar 01 22:14:47 PST 2021,,,104,100% (17/17),0% (0/0),0% (0/0),"You come across an angry ogre. 
+Option 1: attack the ogre with your sword
+Option 2: run away from the ogre","You come across an angry ogre.
+Option 1: dance in front of the ogre
+Option 2: shoot the ogre with your bow and arrow","You come across an angry ogre.
+Option 1: hide behind a nearby bush
+Option 2: attempt to sneak past the ogre","You come across an angry ogre.
+Option 1: distract the ogre with a rock
+Option 2: hide behind a nearby bush","You come across an angry ogre.
+Option 1: walk your dog
+Option 2: go take a shower","You come across an angry ogre.
+Option 1: go get groceries
+Option 2: go to the airport",Yes,Yes,No,No,No,No,,
