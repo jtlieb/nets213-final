@@ -13,6 +13,8 @@ neg_qual_controls = [
     'blacksmith tuesday tree under the tent'
 ]
 
+pos_qual_control = 'if you are reading this answer "Yes"'
+
 
 def create_input(mturk_res):
 
@@ -54,7 +56,7 @@ def create_input(mturk_res):
 
         for i in inputs:
             row.append(i)
-
+        row.append(pos_qual_control)
         row.append(random.choice(neg_qual_controls))
         row.append(random.choice(neg_qual_controls))
 
@@ -79,6 +81,7 @@ def main():
             'Input_2',
             'Input_3',
             'Input_4',
+            'pos_qual'
             'neg_qual_1',
             'neg_qual_2'
         ]
@@ -99,8 +102,9 @@ def main():
                 'Input_2': tup[8],
                 'Input_3': tup[9],
                 'Input_4': tup[10],
-                'neg_qual_1': tup[11],
-                'neg_qual_2': tup[12]
+                'pos_qual': tup[11],
+                'neg_qual_1': tup[12],
+                'neg_qual_2': tup[13]
             })
 
     master_data = pd.read_csv(f"MASTER_{iteration - 1}.csv")
