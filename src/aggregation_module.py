@@ -14,16 +14,22 @@ import math
 
 
 def create_input(mturk_res):
+  # Array to hold all stories 
   stories = []
   for i, row in mturk_res.iterrows():
+      # Current story
       story_so_far = []
+    
       decision_1 = row['Decision1_HitId']
-      # Represent the data we need to store for each story:
+      # Story branches into 2:
       first = []
       sec = []
+
+      # First col in output needs to be id
       first.append(row['HitId'])
       sec.append(row['HitId'])
 
+      # Second col in output needs to be referring decision
       first.append(row['Decision1'])
       sec.append(row['Decision2'])
 
@@ -35,21 +41,27 @@ def create_input(mturk_res):
         branch2 = row['Decision2']
         while (not math.isnan(curr_referring_story)):
           for i2, row2 in mturk_res.iterrows():
+            # Find the matching story
             if row2['HitId'] == curr_referring_story:
               story_so_far.append(referring_decision)
               referring_decision = row2['Referring_Decision']
 
               story_so_far.append(row2['Text'])
               curr_referring_story = row2['Referring_Story_Id']
-
+          # Part of the story that is shared both
           story_so_far.reverse()
           story1 = story_so_far.copy()
           story2 = story_so_far.copy()
           story1.append(branch1)
           story2.append(branch2)
           
+          # Last part of output is story
           first.append(story1)
           sec.append(story2)
+
+          # Now we have two arrays of [hitid, referring decision, story] that get added
+          # to the bigger array
+
           stories.append(first)
           stories.append(sec)
   return stories
