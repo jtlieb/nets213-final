@@ -1,27 +1,3 @@
-Referring_Story_Id,Referring_Decision,Story,Input_1_Id,Input_2_Id,Input_3_Id,Input_4_Id,Input_1,Input_2,Input_3,Input_4,neg_qual_1,neg_qual_2
-345,1,You see a large creature in the distance. You decide to get a closer look.,3KTZHH2ONIFRWP0G2MA8N816YPU8M9,3KTZHH2ONIFRWP0G2MA8N816YPU8M8,3KTZHH2ONIFRWP0G2MA8N816YPU8M7,3KTZHH2ONIFRWP0G2MA8N816YPU8M6,"You come across an angry ogre. 
-Option 1: attack the ogre with your sword
-Option 2: run away from the ogre","You come across a very angry ogre.
-Option 1: dance in front of the ogre
-Option 2: shoot the ogre with your bow and arrow","You come across a very, very, angry ogre.
-Option 1: hide behind a nearby bush
-Option 2: attempt to sneak past the ogre","You come across an absurdly angry ogre.
-Option 1: distract the ogre with a rock
-Option 2: hide behind a nearby bush","You see the moon falling from the sky.
-Option 1: walk your dog
-Option 2: go take a shower","You see a person driving around in a car. 
-Option 1: go get groceries
-Option 2: go to the airport"
-345,2,You see a large creature in the distance. You decide to distance yourself from it. ,3KTZHH2ONIFRWP0G2MA8N816YPU8M5,3KTZHH2ONIFRWP0G2MA8N816YPU8M4,3KTZHH2ONIFRWP0G2MA8N816YPU8M3,3KTZHH2ONIFRWP0G2MA8N816YPU8M2,"You find yourself in an open field in the night.
-Option 1: walk through the field
-Option 2: sleep","You find yourself at the ocean.
-Option 1: go for a swim
-Option 2: walk along the coast","You find some goblins in the forest.
-Option 1: attack the goblins
-Option 2: hide from them in a nearby bush","You notice some cattle grazing in the open field
-Option 1: kill the cattle and cook their meat
-Option 2: do nothing ","You walk into McDonald's
-Option 1: do your homework
-Option 2: watch Netflix","You walk in circles
-Option 1: make yourself a sandwich
-Option 2: take a nap"
+Referring_Story_Id,Referring_Decision,Story,Input_1_Id,Input_2_Id,Input_3_Id,Input_4_Id,Input_1,Input_2,Input_3,Input_4,neg_qual_1,neg_qual_2,pos_qual
+345,1,You see a large creature in the distance. You decide to get a closer look.,3KTZHH2ONIFRWP0G2MA8N816YPU8M9,3KTZHH2ONIFRWP0G2MA8N816YPU8M8,3KTZHH2ONIFRWP0G2MA8N816YPU8M7,3KTZHH2ONIFRWP0G2MA8N816YPU8M6,You come across an angry ogre.\nOption 1: attack the ogre with your sword\nOption 2: run away from the ogre,You come across a very angry ogre.\nOption 1: dance in front of the ogre\nOption 2: shoot the ogre with your bow and arrow,"You come across a very, very, angry ogre.\nOption 1: hide behind a nearby bush\nOption 2: attempt to sneak past the ogre",You come across an absurdly angry ogre.\nOption 1: distract the ogre with a rock\nOption 2: hide behind a nearby bush,You see the moon falling from the sky.\nOption 1: walk your dog\nOption 2: go take a shower,You see a person driving around in a car. \nOption 1: go get groceries\nOption 2: go to the airport,Are you breathing right now?
+345,2,You see a large creature in the distance. You decide to distance yourself from it.,3KTZHH2ONIFRWP0G2MA8N816YPU8M5,3KTZHH2ONIFRWP0G2MA8N816YPU8M4,3KTZHH2ONIFRWP0G2MA8N816YPU8M3,3KTZHH2ONIFRWP0G2MA8N816YPU8M2,You find yourself in an open field in the night.\nOption 1: walk through the field\nOption 2: sleep,You find yourself at the ocean.\nOption 1: go for a swim\nOption 2: walk along the coast,You find some goblins in the forest.\nOption 1: attack the goblins\nOption 2: hide from them in a nearby bush,You notice some cattle grazing in the open field.\nOption 1: kill the cattle and cook their meat\nOption 2: do nothing ,You walk into McDonald's.\nOption 1: do your homework\nOption 2: watch Netflix,You walk in circles.\nOption 1: make yourself a sandwich\nOption 2: take a nap,Are you breathing right now?
