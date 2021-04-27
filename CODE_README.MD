@@ -5,4 +5,4 @@ The following files are used to generate the CSV files in order to create HITs f
 - `QCOutput.py`: Creates CSV used to generate HITs for the next iteration of the story.
 
 ## Analysis
-We plan to analyze the feasibility of having MTurkers come up with comprehensible storylines that continues from previously crowdsourced stories. We may do some analysis that evaluates the quality and creativity of the writings as well. 
+We plan to analyze the feasibility of having MTurkers come up with comprehensible storylines that continues from previously crowdsourced stories. We may do some analysis that evaluates the quality and creativity of the writings as well. We will do this by examining the results from our quality control modules.
