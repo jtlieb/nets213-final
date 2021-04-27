@@ -1,3 +1,8 @@
+'''
+QCInput module that takes the output of the Aggregation HIT to form the
+input to the Quality Control HIT. 
+'''
+
 import random
 import csv
 import pandas as pd
