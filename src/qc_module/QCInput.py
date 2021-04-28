@@ -20,7 +20,10 @@ neg_qual_controls = [
 
 pos_qual_control = 'if you are reading this answer "Yes"'
 
-
+'''
+creates the input for the quality control HIT. 
+must pass in the output csv dataframe of the aggregation HIT output.
+'''
 def create_input(mturk_res):
 
     story_dict = {}
