@@ -49,7 +49,4 @@ Milestones:
 - Develop game logic
 - Play game
 
-## Code files
-- `aggregation_module.py`: Appends previous story contributions from HIT results to a new CSV used to generate the HITs for the next iteration.
-- `QCInput.py`: Creates CSV used to generate HITs to filter out unusable story lines written in the previous iteration.
-- `QCOutput.py`: Creates CSV used to generate HITs for the next iteration of the story.
+
