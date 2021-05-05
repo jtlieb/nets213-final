@@ -40,7 +40,7 @@ def create_input(mturk_res):
         decision_1 = row['Answer.Decision1']
         decision_2 = row['Answer.Decision2']
 
-        answer_story += '\nOption 1: ' + decision_1 + '\nOption 2: ' + decision_2
+        answer_story += '\\nOption 1: ' + decision_1 + '\\nOption 2: ' + decision_2
 
         key = str(ref_story_id) + "@" + str(ref_decision_id) + "@" + story
 
