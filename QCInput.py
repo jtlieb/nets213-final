@@ -37,6 +37,10 @@ def create_input(mturk_res):
         hit_id = row['HITId']
         worker_id = row['WorkerId']
         answer_story = row['Answer.Story']
+        decision_1 = row['Answer.Decision1']
+        decision_2 = row['Answer.Decision2']
+
+        answer_story += '\n' + decision_1 + '\n' + decision_2
 
         key = str(ref_story_id) + "@" + str(ref_decision_id) + "@" + story
 
