@@ -9,6 +9,8 @@ import pandas as pd
 
 iteration = 1
 
+INPUT_FILE = 'data/level1/batch_results_1.csv'
+OUTPUT_FILE = 'data/QC_inputs/QC_HIT_INPUT.csv'
 
 neg_qual_controls = [
     'dog dog went the to beach square computer',
@@ -81,11 +83,11 @@ def create_input(mturk_res):
 def main():
     # Read in CVS result file with pandas
     # PLEASE DO NOT CHANGE
-    mturk_res = pd.read_csv('data/level1/batch_results_1.csv')
+    mturk_res = pd.read_csv(INPUT_FILE)
 
     # Call functions and output required CSV files
 
-    with open('data/QC_inputs/QC_HIT_INPUT.csv', mode='w') as csv_file:
+    with open(OUTPUT_FILE, mode='w') as csv_file:
         fieldnames = [
             'Referring_Story_Id',
             'Referring_Decision_Id',
