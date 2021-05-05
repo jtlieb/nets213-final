@@ -90,7 +90,7 @@ def main():
     with open(OUTPUT_FILE, mode='w') as csv_file:
         fieldnames = [
             'Referring_Story_Id',
-            'Referring_Decision_Id',
+            'Referring_Decision',
             'Story',
             'Input_1_Id',
             'Input_2_Id',
@@ -112,7 +112,7 @@ def main():
             print(len(tup), "should be 14")
             writer.writerow({
                 'Referring_Story_Id': tup[0],
-                'Referring_Decision_Id': tup[1],
+                'Referring_Decision': tup[1],
                 'Story': tup[2],
                 'Input_1_Id': tup[3],
                 'Input_2_Id': tup[4],
