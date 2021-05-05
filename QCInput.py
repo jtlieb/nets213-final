@@ -29,28 +29,31 @@ def create_input(mturk_res):
     story_dict = {}
 
     for i, row in mturk_res.iterrows():
-        ref_story_id = row['Referring_Story_Id']
-        ref_decision_id = row['Referring_Decision_Id']
-        story = row['Story']
-        hit_id = row['HitId']
+        ref_story_id = row['Input.Referring_Story_Id']
+        ref_decision_id = row['Input.Referring_Decision_Id']
+        story = row['Input.Story']
+        hit_id = row['HITId']
         worker_id = row['WorkerId']
         answer_story = row['Answer.Story']
 
-        key = tuple([ref_story_id, ref_decision_id, story])
+        key = str(ref_story_id) + "@" + str(ref_decision_id) + "@" + story
 
         if not key in story_dict:
             story_dict[key] = []
 
         story_dict[key].append(tuple([hit_id, answer_story]))
+    
 
     res = []
 
     for key in story_dict:
         row = []
 
-        row.append(key[0])
-        row.append(key[1])
-        row.append(key[2])
+        elems = key.split("@")
+
+        row.append(elems[0])
+        row.append(elems[1])
+        row.append(elems[2])
 
         input_ids = []
         inputs = []
@@ -64,21 +67,27 @@ def create_input(mturk_res):
 
         for i in inputs:
             row.append(i)
+
         row.append(pos_qual_control)
         row.append(random.choice(neg_qual_controls))
         row.append(random.choice(neg_qual_controls))
+
+        res.append(row)
+
+    
+    return res
 
 
 def main():
     # Read in CVS result file with pandas
     # PLEASE DO NOT CHANGE
-    mturk_res = pd.read_csv('AGG_HIT_OUTPUT.csv')
+    mturk_res = pd.read_csv('data/level1/batch_results_1.csv')
 
     # Call functions and output required CSV files
 
-    with open('data/input/QC_HIT_INPUT.csv', mode='w') as csv_file:
+    with open('data/QC_inputs/QC_HIT_INPUT.csv', mode='w') as csv_file:
         fieldnames = [
-            'Referring_Story_id',
+            'Referring_Story_Id',
             'Referring_Decision_Id',
             'Story',
             'Input_1_Id',
@@ -89,7 +98,7 @@ def main():
             'Input_2',
             'Input_3',
             'Input_4',
-            'pos_qual'
+            'pos_qual',
             'neg_qual_1',
             'neg_qual_2'
         ]
@@ -98,8 +107,9 @@ def main():
         writer.writeheader()
 
         for tup in create_input(mturk_res):
+            print(len(tup), "should be 14")
             writer.writerow({
-                'Referring_Story_id': tup[0],
+                'Referring_Story_Id': tup[0],
                 'Referring_Decision_Id': tup[1],
                 'Story': tup[2],
                 'Input_1_Id': tup[3],
@@ -115,34 +125,34 @@ def main():
                 'neg_qual_2': tup[13]
             })
 
-    master_data = pd.read_csv(f"MASTER_{iteration - 1}.csv")
-    qc_data = pd.read_csv('QC_MODULE_OUTPUT.csv')
+    # master_data = pd.read_csv(f"MASTER_{iteration - 1}.csv")
+    # qc_data = pd.read_csv('QC_MODULE_OUTPUT.csv')
 
-    story_cons = dict()  # (ref_story, ref_decision) -> (HitId, input, decision1, decision2)
+    # story_cons = dict()  # (ref_story, ref_decision) -> (HitId, input, decision1, decision2)
 
-    for i, row in qc_data.iterrows():
-        ref_story = row["Referring_Story_Id"]
-        ref_dec = int(row["Referring_Decision"])
-        hit_id = row["HitId"]
-        input = row["Input"]
-        dec_1 = row["Decision_1"]
-        dec_2 = row["Decision_2"]
+    # for i, row in qc_data.iterrows():
+    #     ref_story = row["Referring_Story_Id"]
+    #     ref_dec = int(row["Referring_Decision"])
+    #     hit_id = row["HitId"]
+    #     input = row["Input"]
+    #     dec_1 = row["Decision_1"]
+    #     dec_2 = row["Decision_2"]
 
-        story_cons[(ref_story, ref_dec)] = (hit_id, input, dec_1, dec_2)
+    #     story_cons[(ref_story, ref_dec)] = (hit_id, input, dec_1, dec_2)
 
-    # Add new data to master_data dataframe
-    for (ref_story, ref_dec), (hit_id, input, dec_1, dec_2) in story_cons.items():
-        df = pd.DataFrame({"HitId": [hit_id],
-                           "Text": [input],
-                           "Decision1": [dec_1],
-                           "Decision2": [dec_2],
-                           "Referring_Story_Id": [ref_story],
-                           "Referring_Decision": [ref_dec]
-                           })
+    # # Add new data to master_data dataframe
+    # for (ref_story, ref_dec), (hit_id, input, dec_1, dec_2) in story_cons.items():
+    #     df = pd.DataFrame({"HitId": [hit_id],
+    #                        "Text": [input],
+    #                        "Decision1": [dec_1],
+    #                        "Decision2": [dec_2],
+    #                        "Referring_Story_Id": [ref_story],
+    #                        "Referring_Decision": [ref_dec]
+    #                        })
 
-        master_data = master_data.append(df, ignore_index=True)
+    #     master_data = master_data.append(df, ignore_index=True)
 
-    master_data.to_csv(f'MASTER_{iteration}.csv', index=False)
+    # master_data.to_csv(f'MASTER_{iteration}.csv', index=False)
 
 
 if __name__ == '__main__':
