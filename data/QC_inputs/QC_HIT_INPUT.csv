@@ -1,10 +1,10 @@
 Referring_Story_Id,Referring_Decision,Story,Input_1_Id,Input_2_Id,Input_3_Id,Input_4_Id,Input_1,Input_2,Input_3,Input_4,pos_qual,neg_qual_1,neg_qual_2
 nan,nan,You are a blacksmith working for the royal forge. The commoners aren't happy with the monarchy and you've secretly been making weapons for a potential uprising.,3ABAOCJ4R84X2T0COGNKMP5SL93QM7,3ABAOCJ4R84X2T0COGNKMP5SL93QM7,3ABAOCJ4R84X2T0COGNKMP5SL93QM7,3ABAOCJ4R84X2T0COGNKMP5SL93QM7,"The monarchy raids the rebel insurgent headquarters, capturing the leader. He declares war against all who oppose him with the threat of public execution. You believe in the rebels' cause to liberate the people, but you are also afraid of being killed by the monarchy. You hear a banging at your door by someone who ends up being a high ranking officer in the monarchy. He immediately finds out that you are building weapons for the insurgents.
-Impale the officer, killing him.
-You turn yourself in, begging on your knees declaring your loyalty to the monarchy.","Walking through the forest, you come across a time machine! You're scared to use it, but think going to the future could help the rebellion.
-GO TO THE FUTURE!!!!!
-keep making weapons for the revolution","In order to make weapons for the uprising, you are going to need plenty of ores. Unfortunately, mining the required ores can be a quite dangerous task. Your good friend Charles, a well-mannered guy who has in the past shown full support for the monarchy, turns out to be quite the formidable warrior, and would be more than happy to lend a helping hand in acquiring such resources.
-Ask Charles to go fetch ores
-Go get the ores yourself","You're especially proud of one specific weapon that you've been working on that you need to keep extra safe: a lightsaber. It can cut through any knight's armor and swords with ease, and you think it could be the turning point of the rebellion. No one knows about this technology, and in fact you don't even remember how you made it. You were in some sort of daze.
-Do you take the light saber to the rebellion leader in the outskirts of the city?
-Do you keep it for yourself?","if you are reading this answer ""Yes""",circle round square corner side baseball cap,circle round square corner side baseball cap
+Option 1: Impale the officer, killing him.
+Option 2: You turn yourself in, begging on your knees declaring your loyalty to the monarchy.","Walking through the forest, you come across a time machine! You're scared to use it, but think going to the future could help the rebellion.
+Option 1: GO TO THE FUTURE!!!!!
+Option 2: keep making weapons for the revolution","In order to make weapons for the uprising, you are going to need plenty of ores. Unfortunately, mining the required ores can be a quite dangerous task. Your good friend Charles, a well-mannered guy who has in the past shown full support for the monarchy, turns out to be quite the formidable warrior, and would be more than happy to lend a helping hand in acquiring such resources.
+Option 1: Ask Charles to go fetch ores
+Option 2: Go get the ores yourself","You're especially proud of one specific weapon that you've been working on that you need to keep extra safe: a lightsaber. It can cut through any knight's armor and swords with ease, and you think it could be the turning point of the rebellion. No one knows about this technology, and in fact you don't even remember how you made it. You were in some sort of daze.
+Option 1: Do you take the light saber to the rebellion leader in the outskirts of the city?
+Option 2: Do you keep it for yourself?","if you are reading this answer ""Yes""",open wall the saturday over restaurant the,open wall the saturday over restaurant the
