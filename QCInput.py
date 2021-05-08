@@ -9,8 +9,8 @@ import pandas as pd
 
 iteration = 1
 
-INPUT_FILE = 'data/level1/batch_results_1.csv'
-OUTPUT_FILE = 'data/QC_inputs/QC_HIT_INPUT.csv'
+INPUT_FILE = 'data/level2/batch_results.csv'
+OUTPUT_FILE = 'data/level2/QC_HIT_INPUT.csv'
 
 neg_qual_controls = [
     'dog dog went the to beach square computer',
@@ -20,7 +20,7 @@ neg_qual_controls = [
     'blacksmith tuesday tree under the tent'
 ]
 
-pos_qual_control = 'if you are reading this answer "Yes"'
+pos_qual_control = r"if you are reading this answer \'Yes\'"
 
 '''
 creates the input for the quality control HIT. 
@@ -91,7 +91,7 @@ def main():
 
     # Call functions and output required CSV files
 
-    with open(OUTPUT_FILE, mode='w') as csv_file:
+    with open(OUTPUT_FILE, mode='w', newline='') as csv_file:
         fieldnames = [
             'Referring_Story_Id',
             'Referring_Decision',
@@ -113,7 +113,16 @@ def main():
         writer.writeheader()
 
         for tup in create_input(mturk_res):
+            tup[7] = tup[7].replace("'", r"\'")
+            # tup[7] = tup[7].replace('"', r'\"')
+            tup[8] = tup[8].replace("'", r"\'")
+            # tup[8] = tup[8].replace('"', r'\"'),
+            tup[9] = tup[9].replace("'", r"\'")
+            # tup[9] = tup[9].replace('"', r'\"'),
+            tup[10] = tup[10].replace("'", r"\'")
+            # tup[10] = tup[10].replace('"', r'\"'),
             print(len(tup), "should be 14")
+            print(tup)
             writer.writerow({
                 'Referring_Story_Id': tup[0],
                 'Referring_Decision': tup[1],
