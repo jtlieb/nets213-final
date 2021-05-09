@@ -9,8 +9,8 @@ import pandas as pd
 
 iteration = 1
 
-INPUT_FILE = 'data/level2/batch_results.csv'
-OUTPUT_FILE = 'data/level2/QC_HIT_INPUT.csv'
+INPUT_FILE = 'data/level3/agg_results.csv'
+OUTPUT_FILE = 'data/level3/QC_HIT_INPUT.csv'
 
 neg_qual_controls = [
     'dog dog went the to beach square computer',
@@ -32,7 +32,7 @@ def create_input(mturk_res):
 
     for i, row in mturk_res.iterrows():
         ref_story_id = row['Input.Referring_Story_Id']
-        ref_decision_id = row['Input.Referring_Decision_Id']
+        ref_decision = row['Input.Referring_Decision']
         story = row['Input.Story']
         hit_id = row['HITId']
         worker_id = row['WorkerId']
@@ -40,9 +40,15 @@ def create_input(mturk_res):
         decision_1 = row['Answer.Decision1']
         decision_2 = row['Answer.Decision2']
 
+        decision_1 = decision_1 if decision_1.split()[0].upper() != 'I' else decision_1[decision_1.index(' ') + 1:] 
+        decision_2 = decision_2 if decision_2.split()[0].upper() != 'I' else decision_2[decision_2.index(' ') + 1:] 
+
+        decision_1 = decision_1 if decision_1.split()[0].upper() == 'YOU' else 'You ' + decision_1[0].lower() + decision_1[1:]
+        decision_2 = decision_2 if decision_2.split()[0].upper() == 'YOU' else 'You ' + decision_2[0].lower() + decision_2[1:]
+
         answer_story += '\\nOption 1: ' + decision_1 + '\\nOption 2: ' + decision_2
 
-        key = str(ref_story_id) + "@" + str(ref_decision_id) + "@" + story
+        key = str(ref_story_id) + "@" + str(ref_decision) + "@" + story
 
         if not key in story_dict:
             story_dict[key] = []
