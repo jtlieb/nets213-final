@@ -12,7 +12,7 @@ import pandas as pd
 import time
 import random
 
-MAX_DEPTH = 5
+MAX_DEPTH = 6
 
 
 class StoryLevel:
@@ -50,7 +50,8 @@ def main():
     # DEFINE STORY TREE AND LOAD IN DATA
     story_tree = dict()
 
-    master_data = pd.read_csv("../data/level5/MASTER_5.csv")
+    master_data = pd.read_csv(
+        "/Users/justinlieb/Documents/College/Spring 2021/NETS 213/nets213-final/data/level6/MASTER_6.csv")
 
     for i, row in master_data.iterrows():
         level = StoryLevel(row)
@@ -93,16 +94,16 @@ def main():
                       "Interesting.", "Oh dear God, that is all I can say to that horrendous decision."]
 
         while True:
-            print("\n\n**** LEVEL " + level + "****\n")
+            print("\n\n**** LEVEL " + str(level) + "****\n")
             if level == 1:
                 print("You are a blacksmith working for the royal forge. The commoners aren't happy with the monarch and you've secretly been making weapons for a potential uprising.")
 
             print(cur_level.text)
             print("\n")
             time.sleep(3)
-            print("** OPTION 1: " + cur_level.d1 + " **")
+            print("** OPTION 1: " + str(cur_level.d1) + " **")
             time.sleep(1)
-            print("** OPTION 2: " + cur_level.d2 + " **")
+            print("** OPTION 2: " + str(cur_level.d2) + " **")
             time.sleep(1)
             print("\n Type \"1\" or \"2\" to select your choice")
             response = None
