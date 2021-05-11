@@ -93,13 +93,16 @@ def main():
                       "Interesting.", "Oh dear God, that is all I can say to that horrendous decision."]
 
         while True:
-            print(f"\n\n**** LEVEL {level} ****\n")
+            print("\n\n**** LEVEL " + level + "****\n")
+            if level == 1:
+                print("You are a blacksmith working for the royal forge. The commoners aren't happy with the monarch and you've secretly been making weapons for a potential uprising.")
+
             print(cur_level.text)
             print("\n")
             time.sleep(3)
-            print(f"** OPTION 1: {cur_level.d1} **")
+            print("** OPTION 1: " + cur_level.d1 + " **")
             time.sleep(1)
-            print(f"** OPTION 2: {cur_level.d2} **")
+            print("** OPTION 2: " + cur_level.d2 + " **")
             time.sleep(1)
             print("\n Type \"1\" or \"2\" to select your choice")
             response = None
